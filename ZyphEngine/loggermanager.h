@@ -9,9 +9,11 @@
 class LoggerManager
 {
 private:
+	std::map<std::string, Logger*> m_loggers;
+private:
 	virtual ~LoggerManager();
 	static LoggerManager* m_LoggerManager;
-	std::map<std::string, Logger*> m_loggers;
+
 public:
 	static LoggerManager* GetInstance();
 	Logger* AcquireLogger(std::string loggerName);

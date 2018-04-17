@@ -4,7 +4,10 @@
 #include <string>
 
 class Logger
-{	
+{
+private:
+	std::string m_logfile;
+	std::string m_loggerName;
 public:
 	enum MessageType
 	{
@@ -21,8 +24,7 @@ public:
 	void DeleteLogFile();
 private:
 	std::string ConvertEnumToString(MessageType messageType);
-	std::string m_logfile;
-	std::string m_loggerName;
+
 };
 
 #endif
